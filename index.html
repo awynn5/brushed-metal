@@ -3,19 +3,30 @@
 
 <head>
 
-  <meta charset="UTF-8">
-
+  <meta http-equiv="Content-type" content="text/html;charset="UTF-8">
+  <meta name="viewport" id="viewport"
+    content="width=device-width, height=device-height,initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<script type="text/javascript" charset="utf-8" src="phonegap.js></script>
+	
+	<script type="text/javascript" charset="utf-8">
+	
+		function onBodyLoad() {
+			document.addEventListener("deviceready" ,onDeviceReady, false);
+		}
+		function onDeviceReady() {
+			navigator.notification.alert("PhoneGap is ready!");
+		}
+	</script>
+	
   <title>Food Scanner</title>
 
   <link rel="stylesheet" href="css/reset.css">
 
-  <link rel='stylesheet prefetch' href='https://c9.io/heartdesign/demo-project/workspace/icomoon/style.css'>
-
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 
 </head>
 
-<body>
+<body onload="onBodyLoad()">
 <a href="scan.html" class="metal radial oval">Scan</a>
 <a href="keypad.html" class="metal radial oval">Keypad</a>
 <a href="about.html" class="metal radial oval" style="font-size:50px;">i</a>
